@@ -1,0 +1,82 @@
+.header_outer_container{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    height: 10vh;
+    color: white;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+}
+
+.nav__black{
+    background-color: rgb(20, 20, 20);
+}
+
+.header_container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* DESKTOP */
+.header_left ul{
+    width: 140%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.header_right ul{
+    width: 150%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    cursor: pointer;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1023px) {
+
+    .header_container{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .header_left,
+    .header_right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 🔑 OVERRIDE BAD WIDTHS */
+    .header_left ul,
+    .header_right ul{
+        width: 100%;
+        justify-content: center;
+        gap: 25px;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 650px) {
+
+    .header_left ul,
+    .header_right ul{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .header_outer_container{
+        height: auto;
+    }
+}
